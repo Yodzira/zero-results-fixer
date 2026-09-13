@@ -127,6 +127,16 @@ class ZRF_Applier {
 			}
 		}
 
+		// the_posts runs AFTER WP_Query set post_count/found_posts: with zero
+		// native results the loop would still render "nothing found" unless
+		// the counters are synced with the injected set.
+		$query->posts       = $posts;
+		$query->post_count  = count( $posts );
+		$query->found_posts = max( (int) $query->found_posts, count( $posts ) );
+		if ( $posts ) {
+			$query->post = $posts[0];
+		}
+
 		return $posts;
 	}
 
