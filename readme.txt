@@ -28,7 +28,7 @@ Works with the native WordPress/WooCommerce search. Does not fight your search p
 Pro adds automation, reports and integrations on top of the free version
 (one license = one site, 12 months of updates):
 
-https://yodsira.duckdns.org/buy/zero-results-fixer
+https://yodsira.com/buy/zero-results-fixer
 
 == Installation ==
 
